@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <title>🔮 Detail Mahasiswa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #eafaf1 0%, #c8f5d5 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      h3 {
+        color: #0b8a43;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      table {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      th {
+        background: #0b8a43 !important;
+        color: #fff !important;
+        width: 40%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container text-center">
+      <h3 class="mb-4">Detail Mahasiswa</h3>
+
+      <table class="table table-bordered w-50 mx-auto shadow">
+        <tr>
+          <th>NIM</th>
+          <td>{{ mhs.nim }}</td>
+        </tr>
+
+        <tr>
+          <th>Nama</th>
+          <td>{{ mhs.nama }}</td>
+        </tr>
+
+        <tr>
+          <th>Tahun Masuk</th>
+          <td>{{ mhs.tahun_masuk }}</td>
+        </tr>
+
+        <tr>
+          <th>Alamat</th>
+          <td>{{ mhs.alamat }}</td>
+        </tr>
+
+        <tr>
+          <th>Tanggal Lahir</th>
+          <td>{{ mhs.tanggal_lahir }}</td>
+        </tr>
+      </table>
+
+      <a href="{{ url_for('mahasiswa.list_mahasiswa') }}" class="btn btn-outline-dark mt-3">⬅️ Kembali</a>
+    </div>
+  </body>
+</html>
